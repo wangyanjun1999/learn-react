@@ -12,24 +12,15 @@ function App() {
   // 实现加
   const increase = () => {
     setCount(count + 1);
-  };
   // 实现减
   const decrease = () => {
     setCount(count - 1);
-  };
-
-
-  // 归零
-  const reset = () =>{
-    setCount(0);
   }
   return (
     <>
-      <h1>我的计数器:{count}</h1>
+      <h1>我的计数器</h1>
       <button onClick={increase}>加一</button>
-      {/* REVIEW:禁用“减一”按钮当 count 为 0 时（防止负数） */}
-      <button onClick={decrease}   disabled={count === 0}>减一</button>
-      <button onClick={reset}>归零</button>
+      <button onClick={decrease}>减一</button>
     </>
   );
 }
